@@ -289,127 +289,98 @@
     </script>
 
 
-    <!-- Projects Start -->
-    <!-- <div class="container-xxl py-6 pt-5" id="project">
-        <div class="container">
-            <div class="row g-5 mb-5 align-items-center wow fadeInUp" data-wow-delay="0.1s">
-                <div class="col-lg-6">
-                    <h1 class="display-5 mb-0">My Projects</h1>
-                </div>
-                <div class="col-lg-6 text-lg-end">
-                    <ul class="list-inline mx-n3 mb-0" id="portfolio-flters">
-                        <li class="mx-3 active" data-filter="*">All Projects</li>
-                        <li class="mx-3" data-filter=".first">UI/UX Design</li>
-                        <li class="mx-3" data-filter=".second">Graphic Design</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row g-4 portfolio-container wow fadeInUp" data-wow-delay="0.1s">
-                <div class="col-lg-4 col-md-6 portfolio-item first">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img class="img-fluid" src="img/project-1.jpg" alt="">
-                        <div class="portfolio-btn">
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-1.jpg"
-                                data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i
-                                    class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item second">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img class="img-fluid" src="img/project-2.jpg" alt="">
-                        <div class="portfolio-btn">
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-2.jpg"
-                                data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i
-                                    class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item first">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img class="img-fluid" src="img/project-3.jpg" alt="">
-                        <div class="portfolio-btn">
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-3.jpg"
-                                data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i
-                                    class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item second">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img class="img-fluid" src="img/project-4.jpg" alt="">
-                        <div class="portfolio-btn">
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-4.jpg"
-                                data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i
-                                    class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item first">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img class="img-fluid" src="img/project-5.jpg" alt="">
-                        <div class="portfolio-btn">
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-5.jpg"
-                                data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i
-                                    class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item second">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img class="img-fluid" src="img/project-6.jpg" alt="">
-                        <div class="portfolio-btn">
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-6.jpg"
-                                data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i
-                                    class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Projects End -->
-
-
     <!-- Project Start -->
+
+    <style>
+        /* Animation & positioning styles */
+        .project-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.14);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.24);
+        }
+
+        .project-image {
+            width: 100%;
+            display: block;
+            transition: transform 0.4s;
+        }
+
+        .project-card:hover .project-image {
+            transform: scale(1.07) rotate(-2deg);
+        }
+
+        .project-btn-github {
+            position: absolute;
+            left: 16px;
+            bottom: 16px;
+            background: #222;
+            border-radius: 50%;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
+            font-size: 1.5rem;
+            border: none;
+            z-index: 2;
+            transition: background 0.2s;
+        }
+
+        .project-btn-github:hover {
+            background: #276ef1;
+            color: #fff;
+        }
+
+        .project-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            text-align: center;
+            letter-spacing: 0.5px;
+            color: #222;
+        }
+
+        .project-tech {
+            font-size: 0.9rem;
+            color: #1ab093;
+            letter-spacing: 1px;
+            text-align: center;
+            margin-bottom: 0.8rem;
+            display: block;
+            text-transform: uppercase;
+        }
+    </style>
+
     <div class="container py-6" id="project">
         <h1 class="display-5 mb-5">My Projects</h1>
         <div class="row g-4">
 
             <!-- Project 1 -->
             <div class="col-12 col-md-6 col-lg-4">
-                <div class="position-relative rounded overflow-hidden shadow-sm">
-                    <img class="img-fluid w-100" src="img/project1.jpg" alt="Project 1">
+                <div class="project-card">
+                    <img class="project-image" src="img/project1.jpg" alt="Car Sell System">
+                    <span class="project-tech">USING SQL</span>
+                    <div class="project-title">Tcket Management System</div>
                     <a href="https://github.com/Farhanaa90/SQL-Project/tree/main" target="_blank"
-                        class="btn btn-primary position-absolute top-50 start-50 translate-middle rounded-circle shadow"
-                        style="width: 48px; height: 48px; display: flex; align-items: center; justify-content: center;">
-                        <i class="fa fa-github fs-4 text-white"></i>
+                        class="project-btn-github" title="View on GitHub">
+                        <i class="fab fa-github"></i>
                     </a>
                 </div>
             </div>
-
-            <!-- Project 2 -->
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="position-relative rounded overflow-hidden shadow-sm">
-                    <img class="img-fluid w-100" src="img/project-2.jpg" alt="Project 2">
-                    <a href="https://github.com/yourusername/project-2" target="_blank"
-                        class="btn btn-primary position-absolute top-50 start-50 translate-middle rounded-circle shadow"
-                        style="width: 48px; height: 48px; display: flex; align-items: center; justify-content: center;">
-                        <i class="fa fa-github fs-4 text-white"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Add more projects below as needed -->
-
+            <!-- Add more projects as needed -->
         </div>
     </div>
+
     <!-- Project End -->
 
 
