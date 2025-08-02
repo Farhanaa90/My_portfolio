@@ -307,6 +307,15 @@
     gap: 1rem;
 }
 
+footer {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', sans-serif;
+}
+footer a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
 
 
 
